@@ -52,3 +52,29 @@ def insertion02():
 insertion01()
 insertion02()
 ```
+
+3. Add comment to following program and understand how it works. 
+```python
+import bisect
+
+def find_closest(haystack, needle):
+    # bisect.bisect_left will return the first value in the haystack that is greater
+    # than or equal to the needle
+    i = bisect.bisect_left(haystack, needle)
+    if i == len(haystack):
+        return i - 1
+    elif haystack[i] == needle:
+        return i
+    elif i > 0:
+        j = i - 1
+        # since we know value is larger than needle (and vice versa for the
+        # value at j), we don't need to use absolute values here
+        if haystack[i] - needle > needle - haystack[j]:
+            return j
+    return i
+
+
+closest_index = find_closest(important_numbers, -250)
+print("Closest value to -250: ", important_numbers[closest_index])
+
+```
