@@ -29,6 +29,6 @@ class CourseManagementSystem(object):
 # Instantiate the CourseManagementSystem class
 # When you instantiate the CourseManagementSystem class, 
 # the instance must hold the contents
-cms = CourseManagementSystem('cms.csv')
+cms = CourseManagementSystem('cms.csv', 'names.txt', 'ids.txt', 'departs.txt')
 
 # call create_csv()
