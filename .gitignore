@@ -167,3 +167,4 @@ $RECYCLE.BIN/
 instance/
 *_sol*
 venv
+mongodb
