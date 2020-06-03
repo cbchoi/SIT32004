@@ -127,7 +127,7 @@ class MediaControl(QObject):
 		print(self.obj.playList.item(self.cur_row_idx).text())
 		self.current_animation = self.get_animation(self.obj.playList.item(self.cur_row_idx).text())
 
-		self.timer.start(60)
+		self.timer.start(100)
 		pass
 
 	def pause_animation(self):
@@ -139,7 +139,7 @@ class MediaControl(QObject):
 	def resume_animation(self):
 		print("resume")
 
-		self.timer.start(60)
+		self.timer.start(100)
 		pass
 
 	def stop_animation(self):
